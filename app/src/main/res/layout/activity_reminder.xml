@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ReminderActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="40dp">
+        <TextView
+            android:id="@+id/reminderMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/cream"
+            android:textSize="18sp"
+            android:text=""/>
+
+        <TimePicker
+            android:id="@+id/timePicker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:timePickerMode="spinner"
+            android:theme="@style/Theme.picker"
+            android:padding="40dp"/>
+
+        <androidx.appcompat.widget.SwitchCompat
+            android:id="@+id/simpleSwitch"
+            android:theme="@style/Theme.picker"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+<!--        <Button-->
+<!--            android:id="@+id/reminderButton"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:backgroundTint="@color/dark_purple"-->
+<!--            android:onClick="addReminder"-->
+<!--            android:text="add reminder"-->
+<!--            android:textSize="18sp"-->
+<!--            android:fontFamily="@font/baloo"-->
+<!--            tools:targetApi="lollipop" />-->
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

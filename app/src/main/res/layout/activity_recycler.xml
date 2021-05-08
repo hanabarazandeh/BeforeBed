@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RecyclerActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom_navigation"
+        android:layout_marginBottom="-3dp"
+        android:gravity="bottom"
+        android:orientation="vertical"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp">
+        <ImageView
+            android:id="@+id/emptyImgView"
+            android:layout_width="match_parent"
+            android:layout_height="400dp"
+            android:src="@drawable/empty_home"
+            android:layout_weight="1"/>
+        <TextView
+            android:id="@+id/emptyTextView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="When you add something, you will see them here.
+start your journey now!"
+            android:textSize="18sp"
+            android:textColor="@color/cream"
+            android:fontFamily="@font/baloo"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:layout_above="@+id/bottom_navigation" />
+
+<!--        <Button-->
+<!--            android:id="@+id/deleteDayBttn"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_above="@+id/bottom_navigation"-->
+<!--            android:backgroundTint="@color/dark_purple"-->
+<!--            android:textColor="@color/cream"-->
+<!--            android:fontFamily="@font/baloo"-->
+<!--            android:text="delete"-->
+<!--            android:textSize="18sp"-->
+<!--            android:layout_marginBottom="40dp"/>-->
+    </LinearLayout>
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:elevation="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bottom_navigation"
+        app:itemBackground="@color/purple_200"
+        app:itemTextColor="@drawable/selector"
+        app:itemIconTint="@drawable/selector"
+        app:menu="@menu/menu_navigation"
+        android:layout_alignParentBottom="true"
+        tools:targetApi="lollipop" />
+
+
+
+</RelativeLayout>
